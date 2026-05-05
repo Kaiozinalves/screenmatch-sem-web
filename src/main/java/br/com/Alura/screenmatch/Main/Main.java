@@ -39,6 +39,11 @@ public class Main {
 
         temporadas.forEach(System.out::println);
 
+        temporadas.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
+
+
+
+
 
 
     }
