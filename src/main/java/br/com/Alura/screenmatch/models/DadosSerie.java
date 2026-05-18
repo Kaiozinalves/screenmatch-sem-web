@@ -7,4 +7,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public record DadosSerie(@JsonAlias("Title") String titulo,
                          @JsonAlias("totalSeasons") Integer totalTemporadas,
                          @JsonAlias("imdbRating") String avaliacao) {
+
+    @Override
+    public String toString() {
+        return String.format("""
+1
+                Serie encontrada
+                Titulo: %s
+                Total de temporadas: %d
+                Avaliacao: %s
+                """, titulo, totalTemporadas, avaliacao);
+    }
 }
